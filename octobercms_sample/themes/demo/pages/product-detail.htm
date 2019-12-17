@@ -1,0 +1,25 @@
+title = "Product Detail"
+url = "/product-detail/:id"
+layout = "default"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Chiennghe\Products\Models\Product"
+identifierValue = "{{ :id }}"
+modelKeyColumn = "id"
+displayColumn = "description"
+notFoundMessage = "Record not found"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+<div class="container">
+{% if record %}
+    <div>Name: {{attribute(record, 'name')}}</div>
+    <div>Price: {{attribute(record, 'price')}}</div>
+    {{ attribute(record, displayColumn) | raw }}
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}
+</div>

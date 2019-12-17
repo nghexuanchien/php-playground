@@ -1,0 +1,10 @@
+name: Products
+form: $/chiennghe/products/models/product/fields.yaml
+modelClass: Chiennghe\Products\Models\Product
+defaultRedirect: chiennghe/products/products
+create:
+    redirect: 'chiennghe/products/products/update/:id'
+    redirectClose: chiennghe/products/products
+update:
+    redirect: chiennghe/products/products
+    redirectClose: chiennghe/products/products

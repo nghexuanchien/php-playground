@@ -1,0 +1,5 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table chiennghe_products_'
+    - builder_table_create_chiennghe_products_.php

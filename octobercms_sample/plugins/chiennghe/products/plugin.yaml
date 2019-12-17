@@ -1,0 +1,11 @@
+plugin:
+    name: 'chiennghe.products::lang.plugin.name'
+    description: 'chiennghe.products::lang.plugin.description'
+    author: chiennghe
+    icon: oc-icon-buysellads
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Products
+        url: chiennghe/products/products
+        icon: icon-buysellads

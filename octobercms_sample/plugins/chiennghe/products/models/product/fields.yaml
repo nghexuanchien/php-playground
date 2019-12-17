@@ -1,0 +1,14 @@
+fields:
+    name:
+        label: 'Product Name'
+        span: auto
+        type: text
+    price:
+        label: Price
+        span: auto
+        type: number
+    description:
+        label: 'Product description'
+        size: ''
+        span: full
+        type: richeditor
