@@ -2,5 +2,18 @@ title = "Custom Page Layout"
 url = "/custom-page-layout"
 layout = "my_custom_layout"
 is_hidden = 0
+
+[genericForm]
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
 ==
-The content of custom layout page
+<div class="container">
+<h1>The content is a contact form</h1>
+{% component 'genericForm' %}
+</div>
