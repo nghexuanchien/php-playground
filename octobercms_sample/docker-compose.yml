@@ -1,18 +1,5 @@
-version: '2.2'
+version: '3'
 services:
-  web:
-    image: aspendigital/octobercms:latest
-    ports:
-      - 8088:80
-    volumes:
-      - $PWD:/var/www/html/plugins/aspendigital/resizer
-    environment:
-      - DB_TYPE=mysql
-      - DB_HOST=mysql #DB_HOST should match the service name of the database container
-      - DB_DATABASE=octobercms
-      - DB_USERNAME=root
-      - DB_PASSWORD=root
-
   mysql:
     image: mysql:5.7
     ports:
@@ -20,3 +7,32 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=octobercms
+
+  web:
+    image: aspendigital/octobercms:latest
+#    image: dragontek/octobercms
+#    build: .
+    ports:
+      - 8088:80
+    volumes:
+#      - $PWD:/var/www/html/plugins/aspendigital/resizer
+      - $PWD:/var/www/html
+    environment:
+      - DB_TYPE=mysql
+      - DB_HOST=mysql #DB_HOST should match the service name of the database container
+      - DB_DATABASE=octobercms
+      - DB_USERNAME=root
+      - DB_PASSWORD=root
+#      - OCTOBER_DB_DRIVER=mysql
+#      - OCTOBER_DB_HOST=root
+#      - OCTOBER_DB_PASSWORD=root
+#      - OCTOBER_DB_NAME=octobercms
+    depends_on:
+      - mysql
+
+#    command: bash -c "
+#      sleep 20s
+#      && php artisan october:up
+#      && /usr/local/bin/docker-oc-entrypoint
+#      && /bin/bash
+#      "
