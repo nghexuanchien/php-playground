@@ -9,6 +9,35 @@ services:
       - 443:443
     volumes:
       - .:/var/www/html:cached
+    environment:
+      - APP_ENV=local
+      - APP_DEBUG=true
+      - APP_CACHE=false
+      - INSTALLED=true
+      - APP_KEY=base64:ASFALWYzJGoZK5TUZImj5pFPjBEu4xTiTCkW93DBQdc=
+      - APP_URL=http://localhost
+      - DB_CONNECTION=mysql
+      - DB_HOST=mysql
+      - DB_PORT=3306
+      - DB_DATABASE=asgardcms
+      - DB_USERNAME=homestead
+      - DB_PASSWORD=secret
+      - CACHE_DRIVER=array
+      - TRANSLATIONS_CACHE_DRIVER=file
+      - SESSION_DRIVER=file
+      - QUEUE_DRIVER=sync
+      - REDIS_HOST=redis
+      - REDIS_PASSWORD=null
+      - REDIS_PORT=6379
+      - MAIL_DRIVER=smtp
+      - MAIL_HOST=mailtrap.io
+      - MAIL_PORT=2525
+      - MAIL_USERNAME=null
+      - MAIL_PASSWORD=null
+      - MAIL_FROM_ADDRESS=null
+      - MAIL_FROM_NAME=null
+      - MAIL_ENCRYPTION=null
+
     networks:
       - asgard_net
   redis:
