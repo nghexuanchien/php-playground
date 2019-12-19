@@ -5,7 +5,7 @@ services:
       context: ./docker/app
     image: asgardcms/app:latest
     ports:
-      - 80:80
+      - 8089:80
       - 443:443
     volumes:
       - .:/var/www/html:cached
@@ -49,7 +49,7 @@ services:
       BLACKFIRE_SERVER_ID:
       BLACKFIRE_SERVER_TOKEN:
     networks:
-    - asgard_net
+      - asgard_net
 
 volumes:
   redisdata:
