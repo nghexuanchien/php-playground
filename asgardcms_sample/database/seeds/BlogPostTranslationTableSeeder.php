@@ -21,8 +21,8 @@ class BlogPostTranslationTableSeeder extends Seeder
                 'title' => 'First post',
                 'slug' => 'first-post',
                 'content' => 'The content of the first post',
-                'created_at' => '2019-12-19 13:10:33',
-                'updated_at' => '2019-12-19 13:10:33'
+//                'created_at' => '2019-12-19 13:10:33',
+//                'updated_at' => '2019-12-19 13:10:33'
             ]
         ]);
         DB::table('blog__post_translations')->insert([
@@ -32,8 +32,8 @@ class BlogPostTranslationTableSeeder extends Seeder
                 'title' => 'Second post',
                 'slug' => 'second-post',
                 'content' => 'The content of the second post',
-                'created_at' => '2019-12-19 13:10:33',
-                'updated_at' => '2019-12-19 13:10:33'
+//                'created_at' => '2019-12-19 13:10:33',
+//                'updated_at' => '2019-12-19 13:10:33'
             ]
         ]);
     }

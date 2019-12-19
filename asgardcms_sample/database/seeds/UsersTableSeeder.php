@@ -14,10 +14,11 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         Model::unguard();
-        DB::table('roles')->insert([
+        $admin = DB::table('users')->where('id', 1)->get();
+        DB::table('users')->insert([
             [
                 'email' => 'publisher@wondaris.com',
-                'password' => '$10$Mm8YjiFRVpKcPa8tI1Jaaex9HJ7pE75IHoyWMxN/aIu2QbFb6/aoa',
+                'password' => $admin[0]->password,
                 'permissions' => null,
                 'last_login' => '2019-12-19 15:07:39',
                 'first_name' => 'Publisher',

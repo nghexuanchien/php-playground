@@ -17,6 +17,5 @@ $ docker-compose exec app php artisan db:seed
 ### Front end
   - Access [http://localhost:8089](http://localhost:8089)
 ### Back end
-  - Access [http://localhost:8089/en/backend](http://localhost:8088/backend) with:
+  - Access [http://localhost:8089/en/backend](http://localhost:8089/en/backend) with:
     + Admin credential  `You have created from step above`
-    + Publisher credential `publisher@wondaris.com/publisher`

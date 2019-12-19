@@ -14,7 +14,7 @@ class MenuItemTableSeeder extends Seeder
     public function run()
     {
         Model::unguard();
-        DB::table('menu__menus')->insert([
+        DB::table('menu__menuitems')->insert([
             [
                 'menu_id' => 1,
                 'page_id' => null,
@@ -33,7 +33,7 @@ class MenuItemTableSeeder extends Seeder
                 'updated_at' => '2019-12-19 13:10:33'
             ]
         ]);
-        DB::table('menu__menus')->insert([
+        DB::table('menu__menuitems')->insert([
             [
                 'menu_id' => 1,
                 'page_id' => 1,
@@ -52,7 +52,7 @@ class MenuItemTableSeeder extends Seeder
                 'updated_at' => '2019-12-19 13:10:33'
             ]
         ]);
-        DB::table('menu__menus')->insert([
+        DB::table('menu__menuitems')->insert([
             [
                 'menu_id' => 1,
                 'page_id' => null,
@@ -71,7 +71,7 @@ class MenuItemTableSeeder extends Seeder
                 'updated_at' => '2019-12-19 13:10:33'
             ]
         ]);
-        DB::table('menu__menus')->insert([
+        DB::table('menu__menuitems')->insert([
             [
                 'menu_id' => 1,
                 'page_id' => null,
@@ -90,7 +90,7 @@ class MenuItemTableSeeder extends Seeder
                 'updated_at' => '2019-12-19 13:10:33'
             ]
         ]);
-        DB::table('menu__menus')->insert([
+        DB::table('menu__menuitems')->insert([
             [
                 'menu_id' => 1,
                 'page_id' => 2,
@@ -109,7 +109,7 @@ class MenuItemTableSeeder extends Seeder
                 'updated_at' => '2019-12-19 13:10:33'
             ]
         ]);
-        DB::table('menu__menus')->insert([
+        DB::table('menu__menuitems')->insert([
             [
                 'menu_id' => 1,
                 'page_id' => 1,
